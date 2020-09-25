@@ -1,0 +1,1 @@
+﻿select * from Accounts_AccountGroupMaster

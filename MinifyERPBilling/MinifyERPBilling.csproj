@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BCCB93C-C618-4FC9-9538-79370DF063E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MinifyERPBilling</RootNamespace>
+    <AssemblyName>MinifyERPBilling</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyHTMLReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyHTMLReports.1.0.0\lib\EasyHTMLReports.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteDB, Version=4.1.4.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiteDB.4.1.4\lib\net40\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLHelper">
+      <HintPath>..\..\..\Projects\Foodexpress247.com\WebAppMVC\FoodExpress247\FoodExpress247\bin\SQLHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\App.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\App.Designer.cs">
+      <DependentUpon>App.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Masters\BankDetailsEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Masters\BankDetailsEntry.Designer.cs">
+      <DependentUpon>BankDetailsEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\TradeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\TradeEntry.Designer.cs">
+      <DependentUpon>TradeEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\TradeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\TradeUserControl.Designer.cs">
+      <DependentUpon>TradeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utils\PaymentRefWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utils\PaymentRefWindow.Designer.cs">
+      <DependentUpon>PaymentRefWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utils\ReciptRefWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utils\ReciptRefWindow.Designer.cs">
+      <DependentUpon>ReciptRefWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vouchers\ContraVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vouchers\ContraVoucher.Designer.cs">
+      <DependentUpon>ContraVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vouchers\PurchaseVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vouchers\PurchaseVoucher.Designer.cs">
+      <DependentUpon>PurchaseVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Masters\ItemEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Masters\ItemEntry.Designer.cs">
+      <DependentUpon>ItemEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vouchers\JournalVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vouchers\JournalVoucher.Designer.cs">
+      <DependentUpon>JournalVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Masters\PartyEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Masters\PartyEntry.Designer.cs">
+      <DependentUpon>PartyEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vouchers\PaymentVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vouchers\PaymentVoucher.Designer.cs">
+      <DependentUpon>PaymentVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vouchers\ReciptVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vouchers\ReciptVoucher.Designer.cs">
+      <DependentUpon>ReciptVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vouchers\SellVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vouchers\SellVoucher.Designer.cs">
+      <DependentUpon>SellVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountGroupModel.cs" />
+    <Compile Include="Models\TransactionVouchermodel.cs" />
+    <Compile Include="Models\DbContext.cs" />
+    <Compile Include="Models\AccountHeadModel.cs" />
+    <Compile Include="Models\ItemMasterModel.cs" />
+    <Compile Include="Models\PurchaseVoucherModel.cs" />
+    <Compile Include="Models\SaleVoucherModel.cs" />
+    <Compile Include="Models\Trade_Model.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlles\BankUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlles\BankUserControl.Designer.cs">
+      <DependentUpon>BankUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlles\DashboardUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlles\DashboardUserControl.Designer.cs">
+      <DependentUpon>DashboardUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlles\ItemUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlles\ItemUserControl.Designer.cs">
+      <DependentUpon>ItemUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlles\PartyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlles\PartyUserControl.Designer.cs">
+      <DependentUpon>PartyUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlles\Reports\AccountLedgerReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlles\Reports\AccountLedgerReport.Designer.cs">
+      <DependentUpon>AccountLedgerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlles\Reports\PurchaseRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlles\Reports\PurchaseRegister.Designer.cs">
+      <DependentUpon>PurchaseRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlles\Reports\StockManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlles\Reports\StockManagement.Designer.cs">
+      <DependentUpon>StockManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\UtilsClass.cs" />
+    <EmbeddedResource Include="Forms\App.resx">
+      <DependentUpon>App.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Masters\BankDetailsEntry.resx">
+      <DependentUpon>BankDetailsEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\TradeEntry.resx">
+      <DependentUpon>TradeEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\TradeUserControl.resx">
+      <DependentUpon>TradeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utils\PaymentRefWindow.resx">
+      <DependentUpon>PaymentRefWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utils\ReciptRefWindow.resx">
+      <DependentUpon>ReciptRefWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vouchers\ContraVoucher.resx">
+      <DependentUpon>ContraVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Masters\ItemEntry.resx">
+      <DependentUpon>ItemEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vouchers\JournalVoucher.resx">
+      <DependentUpon>JournalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Masters\PartyEntry.resx">
+      <DependentUpon>PartyEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vouchers\PaymentVoucher.resx">
+      <DependentUpon>PaymentVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vouchers\PurchaseVoucher.resx">
+      <DependentUpon>PurchaseVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vouchers\ReciptVoucher.resx">
+      <DependentUpon>ReciptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vouchers\SellVoucher.resx">
+      <DependentUpon>SellVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlles\BankUserControl.resx">
+      <DependentUpon>BankUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlles\DashboardUserControl.resx">
+      <DependentUpon>DashboardUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlles\ItemUserControl.resx">
+      <DependentUpon>ItemUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlles\PartyUserControl.resx">
+      <DependentUpon>PartyUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlles\Reports\AccountLedgerReport.resx">
+      <DependentUpon>AccountLedgerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlles\Reports\PurchaseRegister.resx">
+      <DependentUpon>PurchaseRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlles\Reports\StockManagement.resx">
+      <DependentUpon>StockManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Data\AccountGroups.xlsx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shutdown_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\MinifyERP.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MinifyERP_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>MinifyERP.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
